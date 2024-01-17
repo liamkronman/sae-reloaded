@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import SAECoatOfArms from '../Assets/SAE_coat_of_arms.png';
+import Footer from './Footer';
 
 // this is the template for all pages
 interface TemplateProps {
@@ -89,6 +90,7 @@ const Template:React.FC<TemplateProps> = (
                 </nav>
             </header>
             {child}
+            <Footer/>
         </>
     );
 };

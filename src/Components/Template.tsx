@@ -37,6 +37,28 @@ const Template:React.FC<TemplateProps> = (
             <Helmet>
                 <title>{title}</title>
                 <meta name="description" content={description}/>
+                <style>
+                    {`
+                        .nav-link:hover {
+                        background-color: #fbbf24; /* Tailwind yellow-400 */
+                        }
+                        .nav-link:hover::after {
+                        transform: scaleX(1);
+                        }
+                        .nav-link::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -2px; /* Adjust as needed */
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background-color: #6b21a8; /* Tailwind purple-700 */
+                        transform: scaleX(0);
+                        transition: transform .3s ease;
+                        }
+                    `}
+                </style>
             </Helmet>
             <header className="bg-gray-100 text-purple-800">
                 <nav className="flex items-center justify-between flex-wrap p-6">
@@ -55,11 +77,11 @@ const Template:React.FC<TemplateProps> = (
                         <div className="text-sm md:flex-grow">
                             {navigationLinks.map(link => (
                                 <span
-                                    key={link.text}
-                                    onClick={() => handleNavigate(link.path)}
-                                    className="block mt-4 md:inline-block md:mt-0 md:text-left text-center mr-4 cursor-pointer font-bold uppercase hover:bg-amber-300 p-2 rounded transition-colors duration-300"
+                                key={link.text}
+                                onClick={() => handleNavigate(link.path)}
+                                className="nav-link relative block mt-4 md:inline-block md:mt-0 text-center mr-4 cursor-pointer font-bold uppercase p-2 rounded transition-colors duration-300"
                                 >
-                                    {link.text}
+                                {link.text}
                                 </span>
                             ))}
                         </div>

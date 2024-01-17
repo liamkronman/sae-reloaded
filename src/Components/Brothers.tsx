@@ -192,6 +192,7 @@ const classYears: ClassYearGroup = {
     ],
 };
 
+
 const BrotherCard: React.FC<{ brother: Brother }> = ({ brother }) => {
     return (
       <motion.div
@@ -199,14 +200,16 @@ const BrotherCard: React.FC<{ brother: Brother }> = ({ brother }) => {
         whileInView={{ opacity: 1, translateY: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center"
+        className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center border border-purple-300"
       >
-        <img src={brother.photoUrl} alt={brother.name} className="rounded-full h-24 w-24 object-cover mt-4" />
+        <div className="w-24 h-24 overflow-hidden rounded-full mt-4 shadow">
+          <img src={brother.photoUrl} alt={brother.name} className="w-full h-full object-cover" />
+        </div>
         <h3 className="text-lg font-bold mt-2">{brother.name}</h3>
         <p className="text-sm text-gray-600">{brother.hometown}</p>
         <div className="flex space-x-2 mt-2 justify-center">
-          <a href={`https://instagram.com/${brother.instagram}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">
-            <i className="fab fa-instagram fa-lg"></i> {/* Placeholder for Instagram icon */}
+          <a href={`https://instagram.com/${brother.instagram}`} target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800">
+            {/* <FontAwesomeIcon icon={faInstagram} size="lg" /> */}
           </a>
           {/* Add more socials as needed */}
         </div>
@@ -216,20 +219,21 @@ const BrotherCard: React.FC<{ brother: Brother }> = ({ brother }) => {
 };
 
 const Brothers = () => {
-  return (
-    <div className="container mx-auto p-4">
-      {Object.keys(classYears).map(year => (
-        <div key={year}>
-          <h2 className="text-2xl font-bold my-4">Class of {year}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {classYears[year].map((brother, index) => (
-              <BrotherCard key={index} brother={brother} />
-            ))}
-          </div>
+    return (
+        <div className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold text-center text-purple-800 mt-8">The Brothers</h1>
+        {Object.keys(classYears).map(year => (
+            <div key={year}>
+            <h2 className="text-2xl font-bold text-purple-700 my-4">Class of {year}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {classYears[year].map((brother, index) => (
+                <BrotherCard key={index} brother={brother} />
+                ))}
+            </div>
+            </div>
+        ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
 export default Brothers;

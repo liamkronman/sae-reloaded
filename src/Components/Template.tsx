@@ -62,7 +62,7 @@ const Template:React.FC<TemplateProps> = (
             </Helmet>
             <header className="bg-gray-100 text-purple-800">
                 <nav className="flex items-center justify-between flex-wrap p-6">
-                    <div className="flex items-center flex-shrink-0 mr-6">
+                    <div className="flex items-center flex-shrink-0 mr-6 cursor-pointer" onClick={() => navigate("/")}>
                         <img src={SAECoatOfArms} alt="SAE Logo" className="h-20 w-18" />
                         {/* <span className="font-semibold text-xl tracking-tight">MIT Sigma Alpha Epsilon</span> */}
                     </div>

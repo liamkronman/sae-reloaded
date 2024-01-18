@@ -4,6 +4,7 @@ export interface Brother {
     instagram: string;
     interests: string[];
     photoUrl: string;
+    quote: string;
 };
 
 export interface ClassYearGroup {

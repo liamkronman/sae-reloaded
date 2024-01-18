@@ -1,180 +1,26 @@
-import { ClassYearGroup } from './types';
+import { ClassYearGroup, Brother } from './types';
+import jsonData from '../Data/sae_responses.json';
 
-export const classYears: ClassYearGroup = {
-    '2024': [
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-    ],
-    '2025': [
-      {
-        name: "Liam Kronman",
-        hometown: "New York, NY",
-        instagram: "liamkronman",
-        interests: ["Soccer", "Golf", "Music"],
-        photoUrl: "https://i.imgur.com/5Z3Z5ZM.jpg",
-      },
-      {
-        name: "Oliver Martinez",
-        hometown: "Miami, FL",
-        instagram: "olivermtz",
-        interests: ["Cooking", "Travel", "Languages"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-    ],
-    '2026': [
-      {
-        name: "William Johnson",
-        hometown: "Austin, TX",
-        instagram: "willjohnson",
-        interests: ["Gaming", "Skateboarding", "Vlogging"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "James Davis",
-        hometown: "Seattle, WA",
-        instagram: "jamesdavis",
-        interests: ["Robotics", "Snowboarding", "Painting"],
-        photoUrl: "https://i.imgur.com/5Z3Z5ZM.jpg",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-    ],
-    '2027': [
-      {
-        name: "Benjamin Lee",
-        hometown: "Denver, CO",
-        instagram: "benlee",
-        interests: ["Martial Arts", "Astronomy", "Guitar"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Lucas Hernandez",
-        hometown: "San Francisco, CA",
-        instagram: "lucashernandez",
-        interests: ["Surfing", "Startups", "Blogging"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-      {
-        name: "Ethan Walker",
-        hometown: "Los Angeles, CA",
-        instagram: "ethanwalker",
-        interests: ["Photography", "Technology", "Hiking"],
-        photoUrl: "https://i.imgur.com/LpaY82x.png",
-      },
-      {
-        name: "Noah Smith",
-        hometown: "Chicago, IL",
-        instagram: "noahsmith",
-        interests: ["Basketball", "Reading", "Coding"],
-        photoUrl: "https://i.imgur.com/DlK5hz6.png",
-      },
-    ],
-};
+const classYears: ClassYearGroup = jsonData.reduce((acc: ClassYearGroup, item) => {
+    const instagramHandle = item["INSTAGRAM handle (if u rly don't have one put N/A). Example: \"@liamkronman"];
+    const formattedInstagramHandle = instagramHandle.startsWith('@') ? instagramHandle.slice(1) : instagramHandle;
+
+    const brother: Brother = {
+        name: item["Full Name"],
+        hometown: item["Hometown (Ex: New York, NY)"],
+        instagram: formattedInstagramHandle,
+        interests: item["Interests (optional)"].split(', ').filter(interest => interest.trim().length > 0),
+        photoUrl: item["New Photo (optional)"],
+        quote: item["Quote (include attribution if not original, even if another brother said it) (optional)"] || ''
+    };
+
+    const year = item["Year"].toString();
+    if (!acc[year]) {
+        acc[year] = [];
+    }
+    acc[year].push(brother);
+
+    return acc;
+}, {});
+
+export default classYears;

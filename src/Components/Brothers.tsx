@@ -1,5 +1,5 @@
 import React from 'react';
-import { classYears } from './people';
+import classYears from './people';
 import BrotherCard from './BrotherCard';
 
 const Brothers = () => {

@@ -38,6 +38,7 @@ const Template:React.FC<TemplateProps> = (
             <Helmet>
                 <title>{title}</title>
                 <meta name="description" content={description}/>
+                <meta name="theme-color" content="#6b21a8" />
                 <style>
                     {`
                         .nav-link:hover {
@@ -61,7 +62,7 @@ const Template:React.FC<TemplateProps> = (
                     `}
                 </style>
             </Helmet>
-            <header className="bg-gray-100 text-purple-800">
+            <header className="bg-gray-100 text-purple-800 sticky top-0 z-50">
                 <nav className="flex items-center justify-between flex-wrap p-6">
                     <div className="flex items-center flex-shrink-0 mr-6 cursor-pointer" onClick={() => handleNavigate("/")}>
                         <img src={SAECoatOfArms} alt="SAE Logo" className="h-20 w-18" />

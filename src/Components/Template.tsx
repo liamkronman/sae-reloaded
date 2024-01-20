@@ -74,7 +74,7 @@ const Template:React.FC<TemplateProps> = (
                             </svg>
                         </button>
                     </div>
-                    <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full block flex-grow md:flex md:items-center md:w-auto`}>
+                    <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full block md:flex md:items-end md:w-auto`}>
                         <div className="text-sm md:flex-grow">
                             {navigationLinks.map(link => (
                                 <span

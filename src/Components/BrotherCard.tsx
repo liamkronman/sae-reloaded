@@ -23,7 +23,7 @@ const BrotherCard: React.FC<{ brother: Brother }> = ({ brother }) => {
                         <p className="text-sm italic text-gray-600 mt-2">"{brother.quote}"</p>
                     )}
                 </motion.div>
-                <div className="absolute inset-0 bg-purple-600 bg-opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-lg font-bold text-white">
+                <div className="absolute inset-0 bg-purple-600 bg-opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-lg font-bold text-white underline">
                     Check out {brother.name.split(' ')[0]}'s Instagram 😍
                 </div>
             </a>

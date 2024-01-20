@@ -49,7 +49,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "ClubChem",
       "Interests (optional)": "Exploring, hanging out, trying out new things",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "Hell yea",
-      "New Photo (optional)": "https://drive.google.com/open?id=18gHCk8LmnCfbrfCvgo3vWNF07uLP71uT"
+      "New Photo (optional)": "/images/zheming.jpeg"
     },
     {
       "Timestamp": "1/7/2024 3:18:54",
@@ -75,7 +75,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "",
       "Interests (optional)": "",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": ""
+      "New Photo (optional)": "/images/ezra.png"
     },
     {
       "Timestamp": "1/7/2024 10:40:43",
@@ -101,7 +101,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "18.02/18.03 TA, SuperUROP w/ Rohsenow Kendall Heat Transfer Lab, Big Questions Discussion Group",
       "Interests (optional)": "Cooking, Hiking",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": ""
+      "New Photo (optional)": "/images/jason_chen.png"
     },
     {
       "Timestamp": "1/8/2024 23:45:51",
@@ -140,6 +140,45 @@
       "MIT Activities/Clubs you're a member of (optional)": "",
       "Interests (optional)": "",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": ""
+      "New Photo (optional)": "/images/brian.jpeg"
+    },
+    {
+        "Timestamp": "1/14/2024 17:42:29",
+        "Full Name": "Liam Kronman",
+        "Course # (include double major/minor or MEng)": "18C",
+        "Year": 2025,
+        "Hometown (Ex: New York, NY)": "New York, NY",
+        "INSTAGRAM handle (if u rly don't have one put N/A). Example: \"@liamkronman": "@liamkronman",
+        "Links to any other major social media (linkedin, twitter, email address, etc.) (optional)": "",
+        "MIT Activities/Clubs you're a member of (optional)": "SIPB, Networks & Mobile Systems Group",
+        "Interests (optional)": "DJing, Saxophone",
+        "Quote (include attribution if not original, even if another brother said it) (optional)": "",
+        "New Photo (optional)": "/images/liam.png"
+    },
+    {
+        "Timestamp": "1/14/2024 17:42:29",
+        "Full Name": "Jason Wang",
+        "Course # (include double major/minor or MEng)": "",
+        "Year": 2027,
+        "Hometown (Ex: New York, NY)": "",
+        "INSTAGRAM handle (if u rly don't have one put N/A). Example: \"@liamkronman": "",
+        "Links to any other major social media (linkedin, twitter, email address, etc.) (optional)": "",
+        "MIT Activities/Clubs you're a member of (optional)": "",
+        "Interests (optional)": "",
+        "Quote (include attribution if not original, even if another brother said it) (optional)": "",
+        "New Photo (optional)": "/images/jason_wang.jpg"
+    },
+    {
+        "Timestamp": "1/14/2024 17:42:29",
+        "Full Name": "Spencer Sindhusen",
+        "Course # (include double major/minor or MEng)": "",
+        "Year": 2027,
+        "Hometown (Ex: New York, NY)": "",
+        "INSTAGRAM handle (if u rly don't have one put N/A). Example: \"@liamkronman": "",
+        "Links to any other major social media (linkedin, twitter, email address, etc.) (optional)": "",
+        "MIT Activities/Clubs you're a member of (optional)": "",
+        "Interests (optional)": "",
+        "Quote (include attribution if not original, even if another brother said it) (optional)": "",
+        "New Photo (optional)": "/images/spencer.jpeg"
     }
 ]

@@ -3,6 +3,7 @@ export interface Brother {
     hometown: string;
     instagram: string;
     interests: string[];
+    clubs: string[];
     photoUrl: string;
     quote: string;
 };

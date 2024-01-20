@@ -10,6 +10,7 @@ const classYears: ClassYearGroup = jsonData.reduce((acc: ClassYearGroup, item) =
         hometown: item["Hometown (Ex: New York, NY)"],
         instagram: formattedInstagramHandle,
         interests: item["Interests (optional)"].split(', ').filter(interest => interest.trim().length > 0),
+        clubs: item["MIT Activities/Clubs you're a member of (optional)"].split(', ').filter(club => club.trim().length > 0),
         photoUrl: item["New Photo (optional)"],
         quote: item["Quote (include attribution if not original, even if another brother said it) (optional)"] || ''
     };
@@ -22,5 +23,14 @@ const classYears: ClassYearGroup = jsonData.reduce((acc: ClassYearGroup, item) =
 
     return acc;
 }, {});
+
+// Sort each class year's brothers by last name
+(Object.keys(classYears) as Array<keyof ClassYearGroup>).forEach(year => {
+    classYears[year].sort((a, b) => {
+        const aLastName = a.name.split(' ').pop()?.toLowerCase() || '';
+        const bLastName = b.name.split(' ').pop()?.toLowerCase() || '';
+        return aLastName.localeCompare(bLastName);
+    });
+});
 
 export default classYears;

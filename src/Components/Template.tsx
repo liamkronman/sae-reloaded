@@ -19,13 +19,13 @@ const Template:React.FC<TemplateProps> = (
 
     const navigationLinks = [
         { path: '/', text: 'Home' },
-        { path: '/about', text: 'About' },
+        // { path: '/about', text: 'About' },
         { path: '/brothers', text: 'Brothers' },
         { path: '/rush', text: 'Rush' },
-        { path: '/house', text: 'House' },
-        { path: '/events', text: 'Events' },
+        // { path: '/house', text: 'House' },
+        // { path: '/events', text: 'Events' },
         { path: '/contact', text: 'Contact' },
-        { path: '/alumni', text: 'Alumni' },
+        // { path: '/alumni', text: 'Alumni' },
     ];
 
     const handleNavigate = (path: string) => {

@@ -23,20 +23,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "",
       "Interests (optional)": "",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": ""
-    },
-    {
-      "Timestamp": "1/6/2024 22:04:09",
-      "Full Name": "Harry Chen",
-      "Course # (include double major/minor or MEng)": "6-9",
-      "Year": 2025,
-      "Hometown (Ex: New York, NY)": "St. Louis, MO",
-      "INSTAGRAM handle (if u rly don't have one put N/A). Example: \"@liamkronman": "@notharrychen",
-      "Links to any other major social media (linkedin, twitter, email address, etc.) (optional)": "",
-      "MIT Activities/Clubs you're a member of (optional)": "MIT ESP",
-      "Interests (optional)": "Cooking and then eating",
-      "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": ""
+      "New Photo (optional)": "/images/john.jpeg"
     },
     {
       "Timestamp": "1/7/2024 1:11:24",
@@ -62,7 +49,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "MIT LIVE, Biomechatronics Group @ MIT Media Lab",
       "Interests (optional)": "Alto Saxophone, Gaming (Minecraft & Terraria), 3D Printing",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "Wear a helmet",
-      "New Photo (optional)": "https://drive.google.com/open?id=1WMZVsyHNAEhuRDiPB8h1Cu-2mAOtaFMh"
+      "New Photo (optional)": "/images/thomas.jpeg"
     },
     {
       "Timestamp": "1/7/2024 6:26:31",
@@ -127,7 +114,7 @@
       "MIT Activities/Clubs you're a member of (optional)": "",
       "Interests (optional)": "",
       "Quote (include attribution if not original, even if another brother said it) (optional)": "",
-      "New Photo (optional)": "https://drive.google.com/open?id=1fBS_OQGvvb-4ndfXMcOhwClrQV7Y6gVH"
+      "New Photo (optional)": "/images/natty.jpg"
     },
     {
       "Timestamp": "1/14/2024 17:42:29",

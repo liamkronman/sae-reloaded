@@ -3,6 +3,13 @@ import React from 'react';
 const Rush: React.FC = () => {
   return (
     <div className="bg-purple-100 min-h-screen p-4">
+            <div className="container mx-auto p-6 max-w-4xl bg-white shadow-lg rounded-lg my-6">
+        {/* <img src="/images/fall-rush-poster.jpeg" alt="Fall Rush 2024" className="w-full h-auto rounded-lg" /> */}
+        <h1 className="text-4xl font-bold text-purple-800 text-center my-6">Fall Rush 2025</h1>
+        <div className="mt-6">
+          <p>Coming soon! Check back here during orientation to see the full schedule.</p>
+        </div>
+      </div>
       <div className="container mx-auto p-6 max-w-4xl bg-white shadow-lg rounded-lg my-6">
         {/* <img src="/images/fall-rush-poster.jpeg" alt="Fall Rush 2024" className="w-full h-auto rounded-lg" /> */}
         <h1 className="text-4xl font-bold text-purple-800 text-center my-6">Fall Rush 2024</h1>

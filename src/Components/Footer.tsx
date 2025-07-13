@@ -19,16 +19,13 @@ const Footer = () => {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg mb-2">Address</h3>
-                        <p>155 Bay State Rd Boston, MA</p>
+                        <p>155 Bay State Road, Boston, MA</p>
                     </div>
                 </div>
                 <div className="text-center text-xs mt-4">
-                    MIT Sigma Alpha Epsilon © 2024 - All rights reserved
+                    MIT Sigma Alpha Epsilon © 2025 - All rights reserved
                 </div>
             </footer>
-            <a href="https://accessibility.mit.edu" target="_blank" rel="noopener noreferrer" className="font-bold underline fixed bottom-0 right-0 bg-teal-700 hover:bg-teal-800 text-white py-2 px-4 m-4 rounded transition-colors duration-300">
-                Accessibility
-            </a>
         </>
     );
 };

@@ -58,6 +58,24 @@ const brothers: Brother[] = [
     interests: ["Travel", "Colognes", "Golf", "Muay Thai", "Mixology", "Shooting Sports", "Event Derivative Trading", "Indoor Climbing", "Kantian Philosophy"],
     ig: "https://instagram.com/ssspencess",
   },
+  {
+    name: "Thomas Larsen",
+    hometown: "Staten Island, NY",
+    img: "thomasL.jpeg",
+    year: 2026,
+    clubs: ["MIT LIVE", "Biomechatronics Group", "GEL2"],
+    interests: ["Saxophone", "Film Photography", "Gaming", "Traveling", "Music", "Doomscrolling", "Food"],
+    ig: "https://instagram.com/t.h.larsen",
+  },
+  {
+    name: "Lance Berkey",
+    hometown: "Wilbur, WA",
+    img: "lance.jpeg",
+    year: 2026,
+    clubs: ["IM Basketball", "Volleyball", "Soccer"],
+    interests: ["Football", "Reading", "Learning Languages"],
+    ig: "https://instagram.com/lanceberkey",
+  },
 ];
 
 const Card: React.FC<Brother> = ({

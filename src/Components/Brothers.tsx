@@ -151,7 +151,7 @@ const brothers: Brother[] = [
   {
     name: "Jhanny Jiminez",
     hometown: "Queens, NY",
-    img: "jhanny.jpg",
+    img: "jhanny.png",
     year: 2026,
     clubs: ["Squash"],
     interests: ["Fantasy Media", "Music", "Bass"],

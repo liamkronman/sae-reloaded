@@ -13,7 +13,7 @@ const Rush: React.FC = () => {
 
           <div className="p-4 border-l-4 border-purple-600 bg-purple-50">
   <h2 className="text-2xl font-bold text-purple-700">🐉 Lions vs Dragons 🐉</h2>
-  <p className="mt-2">Get ready for the ultimate showdown: a special SAE game of Mafia meets Risk. Strategy, alliances, and a bit of deception make this competition one you won’t forget.</p>
+  <p className="mt-2">Get ready to hit the court for a fast-paced game of dodgeball! Team up, dodge, and throw your way to victory in this high-energy showdown with SAE.</p>
   <p className="font-bold">When: Saturday, 1:00 PM to 3:00 PM, 8/30 | Where: Killian, MIT</p>
 </div>
 
@@ -45,12 +45,6 @@ const Rush: React.FC = () => {
   <h2 className="text-2xl font-bold text-purple-700">🌊 Surf and Turf with SAE 🌊</h2>
   <p className="mt-2">Enjoy a gourmet dinner featuring steak and lobster. A night of fine dining and great company at the house.</p>
   <p className="font-bold">When: Sunday, 7:00 PM to 8:00 PM, 8/31 | Where: SAE House, 155 Bay State Rd, Boston, MA</p>
-</div>
-
-<div className="p-4 border-l-4 border-purple-600 bg-purple-50">
-  <h2 className="text-2xl font-bold text-purple-700">🎉 Semester Kickoff Party 🎉</h2>
-  <p className="mt-2">Ring in the semester with SAE’s biggest party! Music, dancing, and unforgettable vibes late into the night.</p>
-  <p className="font-bold">When: Sunday, 10:00 PM, 8/31 to 1:00 AM, Monday, 9/1 | Where: SAE House, 155 Bay State Rd, Boston, MA</p>
 </div>
 
 <div className="p-4 border-l-4 border-purple-600 bg-purple-50">

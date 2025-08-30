@@ -139,6 +139,24 @@ const brothers: Brother[] = [
     interests: ["Photography", "Embroidering", "Brawlhalla"],
     ig: "https://www.instagram.com/thomascong13",
   },
+  {
+    name: "Jonathan Zhao",
+    hometown: "Queens, NY",
+    img: "joezhao.jpeg",
+    year: 2026,
+    clubs: ["Biology UROP"],
+    interests: ["Motorsport", "Westerns and Thrillers (movies)", "Philosophy"],
+    ig: "https://www.instagram.com/saloushe12",
+  },
+  {
+    name: "Jhanny Jiminez",
+    hometown: "Queens, NY",
+    img: "jhanny.jpeg",
+    year: 2026,
+    clubs: ["Squash"],
+    interests: ["Fantasy Media", "Music", "Bass"],
+    ig: "https://www.instagram.com/jhanny_jz",
+  },
 ];
 
 const Card: React.FC<Brother> = ({

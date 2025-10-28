@@ -135,7 +135,7 @@ const brothers: Brother[] = [
     hometown: "Houston, TX",
     img: "addison.png",
     year: 2027,
-    clubs: ["Muay Thai", "Running", "Weightlifting", "Shareholder value creation"],
+    clubs: ["Muay Thai", "Running", "Weightlifting", "Shareholder Value Creation"],
     interests: ["Positive externalities"],
     ig: "https://www.instagram.com/addisonspiegel",
   },

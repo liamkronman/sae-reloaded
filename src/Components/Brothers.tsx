@@ -127,8 +127,17 @@ const brothers: Brother[] = [
     img: "michael.png",
     year: 2028,
     clubs: ["Science Olympiad, Sport Taekwondo"],
-    interests: ["Violin", "Poker", "Cats"],
+    interests: ["Violin", "Tennis", "Poker", "Cats"],
     ig: "https://www.instagram.com/michael_voigt_",
+  },
+  {
+    name: "Addison Spiegel",
+    hometown: "Houston, TX",
+    img: "addison.png",
+    year: 2027,
+    clubs: ["Muay Thai", "Running", "Weightlifting", "Shareholder value creation"],
+    interests: ["Positive externalities"],
+    ig: "https://www.instagram.com/addisonspiegel",
   },
   {
     name: "Thomas Cong",

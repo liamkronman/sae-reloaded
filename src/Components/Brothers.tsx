@@ -3,11 +3,12 @@ import React from "react";
 type Brother = {
   name: string;
   hometown: string;
-  img: string; // FILENAME ONLY
+  img: string;
   year: number;
   clubs: string[];
   interests: string[];
-  ig: string; // FULL URL
+  ig: string;
+  showclubs?: boolean; // defaults to true
 };
 
 const brothers: Brother[] = [
@@ -117,9 +118,10 @@ const brothers: Brother[] = [
     hometown: "Jamestown, ND",
     img: "jacob.jpeg",
     year: 2028,
-    clubs: ["MIT Hillel"],
-    interests: ["Piano", "Guitar", "Percussion", "Lifting"],
-    ig: "https://www.instagram.com/jjanzen",
+    clubs: [],
+    interests: ["Michael Voight"],
+    ig: "https://www.instagram.com/zezz_tee",
+    showclubs: false,
   },
   {
     name: "Michael Voigt",
@@ -175,6 +177,7 @@ const Card: React.FC<Brother> = ({
   clubs,
   interests,
   ig,
+  showclubs = true,
 }) => (
   <div className="relative group rounded-2xl shadow hover:shadow-lg transition">
     {/* front face */}
@@ -197,10 +200,15 @@ const Card: React.FC<Brother> = ({
         opacity-0 group-hover:opacity-100 transition-opacity duration-300
       "
     >
-      <p className="text-sm font-semibold text-purple-800">Clubs</p>
-      <p className="text-base text-slate-700 leading-snug">
-        {clubs.join(", ")}
-      </p>
+      {showclubs && (
+        <>
+          <p className="text-sm font-semibold text-purple-800">Clubs</p>
+          <p className="text-base text-slate-700 leading-snug">
+            {clubs.join(", ")}
+          </p>
+          <div className="my-2"></div>
+        </>
+      )}
 
       <p className="mt-3 text-sm font-semibold text-purple-800">Interests</p>
       <p className="text-base text-slate-700 leading-snug">

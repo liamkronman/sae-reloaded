@@ -8,34 +8,24 @@ interface ContactInfo {
 
 const contacts: ContactInfo[] = [
   {
-    name: 'Jonathan Zhao',
-    role: 'President',
-    email: 'jonzhao@mit.edu',
-  },
-  {
-    name: 'Lance Berkey',
-    role: 'Vice President',
-    email: 'lwberkey@mit.edu',
-  },
-  {
     name: 'Abe Schechinger',
-    role: 'Risk Manager',
+    role: 'President',
     email: 'abeschec@mit.edu',
   },
   {
-    name: 'Eddy Calel',
-    role: 'Rush Chair',
-    email: 'ecalel10@mit.edu',
-  },
-  {
-    name: 'Aleksander Garbuz',
-    role: 'Rush Chair',
-    email: 'agarbuz@mit.edu',
-  },
-  {
     name: 'Addison Spiegel',
-    role: 'Rush Chair',
+    role: 'Vice President',
     email: 'spiegel1@mit.edu',
+  },
+  {
+    name: 'Regan Song',
+    role: 'Rush Chair',
+    email: 'reggo@mit.edu',
+  },
+  {
+    name: 'James Ball',
+    role: 'Rush Chair',
+    email: 'jfball@mit.edu',
   },
 ];
 

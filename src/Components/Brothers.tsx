@@ -7,8 +7,8 @@ type Brother = {
   year: number;
   clubs: string[];
   interests: string[];
-  ig: string;
-  showclubs?: boolean; // defaults to true
+  ig: string; // URL
+  showClubs?: boolean; // defaults to true
 };
 
 const brothers: Brother[] = [
@@ -27,9 +27,7 @@ const brothers: Brother[] = [
     img: "hubert.jpg",
     year: 2028,
     clubs: ["Poker Club"],
-    interests: ["Poker", "Gaming (League, TFT, Minecraft)"
-      , "Esports", "Reels"
-    ],
+    interests: ["Poker", "Gaming (League, TFT, Minecraft)", "Esports", "Reels"],
     ig: "https://instagram.com/hubert_jiang",
   },
   {
@@ -56,7 +54,17 @@ const brothers: Brother[] = [
     img: "spencer.jpeg",
     year: 2027,
     clubs: ["MIT Varsity Rifle", "MIT Science Policy Initiative"],
-    interests: ["Travel", "Colognes", "Golf", "Muay Thai", "Mixology", "Shooting Sports", "Event Derivative Trading", "Indoor Climbing", "Kantian Philosophy"],
+    interests: [
+      "Travel",
+      "Colognes",
+      "Golf",
+      "Muay Thai",
+      "Mixology",
+      "Shooting Sports",
+      "Event Derivative Trading",
+      "Indoor Climbing",
+      "Kantian Philosophy",
+    ],
     ig: "https://instagram.com/ssspencess",
   },
   {
@@ -65,7 +73,15 @@ const brothers: Brother[] = [
     img: "thomasL.jpeg",
     year: 2026,
     clubs: ["MIT LIVE", "Biomechatronics Group", "GEL2"],
-    interests: ["Saxophone", "Film Photography", "Gaming", "Traveling", "Music", "Doomscrolling", "Food"],
+    interests: [
+      "Saxophone",
+      "Film Photography",
+      "Gaming",
+      "Traveling",
+      "Music",
+      "Doomscrolling",
+      "Food",
+    ],
     ig: "https://instagram.com/t.h.larsen",
   },
   {
@@ -121,7 +137,7 @@ const brothers: Brother[] = [
     clubs: [],
     interests: ["Michael Voight"],
     ig: "https://www.instagram.com/zezz_tee",
-    showclubs: false,
+    showClubs: false,
   },
   {
     name: "Michael Voigt",
@@ -170,88 +186,109 @@ const brothers: Brother[] = [
   },
 ];
 
-const Card: React.FC<Brother> = ({
+// ES5 + strict safe: sort once for a clean directory feel
+const displayBrothers: Brother[] = [...brothers].sort((a: Brother, b: Brother) =>
+  a.name.localeCompare(b.name)
+);
+
+const BrotherCard: React.FC<Brother> = ({
   name,
   hometown,
   img,
+  year,
   clubs,
   interests,
   ig,
-  showclubs = true,
-}) => (
-  <div className="relative group rounded-2xl shadow hover:shadow-lg transition">
-    {/* front face */}
-    <figure className="flex flex-col items-center rounded-2xl bg-white p-8">
-      <img
-        src={`/images/${img}`}
-        alt={name}
-        className="mb-4 h-28 w-28 rounded-full object-cover ring-2 ring-purple-700/60"
-      />
-      <figcaption className="text-center">
-        <p className="text-lg font-medium text-purple-800">{name}</p>
-        <p className="text-sm text-slate-700">{hometown}</p>
-      </figcaption>
-    </figure>
-
-    {/* hover overlay */}
-    <div
-      className="
-        absolute inset-0 flex flex-col rounded-2xl bg-white/95 px-6 py-4
-        opacity-0 group-hover:opacity-100 transition-opacity duration-300
-      "
-    >
-      {showclubs && (
-        <>
-          <p className="text-sm font-semibold text-purple-800">Clubs</p>
-          <p className="text-base text-slate-700 leading-snug">
-            {clubs.join(", ")}
-          </p>
-          <div className="my-2"></div>
-        </>
-      )}
-
-      <p className="mt-3 text-sm font-semibold text-purple-800">Interests</p>
-      <p className="text-base text-slate-700 leading-snug">
-        {interests.join(", ")}
-      </p>
-
-      <a
-        href={ig}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-auto inline-block rounded bg-purple-700 px-3 py-1 text-sm font-semibold text-white hover:bg-purple-800"
-      >
-        Check out {name.split(" ")[0]}'s Instagram! →
-      </a>
-    </div>
-  </div>
-);
-
-export default function Brothers() {
-  const byYear: Record<number, Brother[]> = {};
-  brothers.forEach((b) => (byYear[b.year] ??= []).push(b));
+  showClubs = true,
+}) => {
+  const firstName = name.split(" ")[0];
+  const hasClubs = showClubs && clubs.length > 0;
+  const hasInterests = interests.length > 0;
 
   return (
-    <main className="min-h-screen animate-bgShift px-6 py-16">
-      <h1 className="mb-12 text-center text-4xl font-bold text-purple-800">
-        The Brothers
-      </h1>
+    <article
+      className="
+        group relative overflow-hidden rounded-2xl border border-slate-200 bg-white
+        shadow-sm transition-shadow hover:shadow-md focus-within:shadow-md
+      "
+    >
+      {/* Base view */}
+      <div className="flex flex-col items-center p-7 text-center">
+        <img
+          src={`/images/${img}`}
+          alt={`${name} headshot`}
+          loading="lazy"
+          className="h-24 w-24 rounded-full object-cover ring-2 ring-purple-700/30"
+        />
 
-      {Object.keys(byYear)
-        .sort((a, b) => Number(a) - Number(b))
-        .map((year) => (
-          <section key={year} className="mb-20">
-            <h2 className="mb-10 text-center text-2xl font-semibold text-purple-700">
-              Class&nbsp;of&nbsp;{year}
-            </h2>
+        <h3 className="mt-4 text-lg font-semibold text-slate-900">{name}</h3>
+        <p className="text-sm text-slate-600">{hometown}</p>
+        <p className="mt-1 text-xs font-medium text-slate-500">Class of {year}</p>
+      </div>
 
-            <div className="mx-auto grid max-w-6xl gap-10 grid-cols-1 sm:grid-cols-3">
-              {byYear[+year].map((bro) => (
-                <Card key={bro.name} {...bro} />
-              ))}
-            </div>
-          </section>
-        ))}
+      {/* Hover overlay */}
+      <div
+        className="
+          absolute inset-0 flex flex-col gap-3 bg-white/95 p-6
+          opacity-0 transition-opacity duration-200
+          group-hover:opacity-100 group-focus-within:opacity-100
+        "
+      >
+        {hasClubs && (
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-700">
+              Activities
+            </p>
+            <p className="mt-1 text-sm text-slate-700">{clubs.join(", ")}</p>
+          </div>
+        )}
+
+        {hasInterests && (
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-700">
+              Interests
+            </p>
+            <p className="mt-1 text-sm text-slate-700">{interests.join(", ")}</p>
+          </div>
+        )}
+
+        <a
+          href={ig}
+          target="_blank"
+          rel="noreferrer"
+          className="
+            mt-auto inline-flex items-center justify-center rounded-lg bg-purple-700 px-3 py-2
+            text-sm font-semibold text-white transition-colors hover:bg-purple-800
+            focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2
+          "
+          aria-label={`Open ${name}'s Instagram`}
+        >
+          View {firstName}&apos;s Instagram →
+        </a>
+      </div>
+    </article>
+  );
+};
+
+export default function Brothers() {
+  return (
+    <main className="min-h-screen bg-slate-50 px-6 py-16">
+      <header className="mx-auto mb-12 max-w-6xl text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-900">
+          Brotherhood
+        </h1>
+        <p className="mt-3 text-base text-slate-600">
+          Meet the brothers and learn about what they’re involved in on campus.
+        </p>
+      </header>
+
+      <div className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {displayBrothers.map((bro: Brother) => (
+            <BrotherCard key={bro.name} {...bro} />
+          ))}
+        </div>
+      </div>
     </main>
   );
 }

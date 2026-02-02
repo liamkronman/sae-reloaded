@@ -16,7 +16,7 @@ const Rush: React.FC = () => {
               Kick off rush with a casual poker tournament. No experience required—just come play.
             </p>
             <p className="font-bold">
-              When: Sunday, 8:00 PM, 2/2 | Where: 1-134
+              When: Monday, 8:00 PM, 2/2 | Where: 1-134
             </p>
           </div>
 
@@ -26,7 +26,7 @@ const Rush: React.FC = () => {
               Burgers, hot dogs, and hanging out with the brothers at the house.
             </p>
             <p className="font-bold">
-              When: Monday, 7:30 PM, 2/3 | Where: SAE House, 155 Bay State Rd
+              When: Tuesday, 7:30 PM, 2/3 | Where: SAE House, 155 Bay State Rd
             </p>
           </div>
 
@@ -36,7 +36,7 @@ const Rush: React.FC = () => {
               A relaxed evening with matcha, live jazz, and good conversation.
             </p>
             <p className="font-bold">
-              When: Tuesday, 7:30 PM, 2/4 | Where: BC B4 Lounge
+              When: Wednesday, 7:30 PM, 2/4 | Where: BC B4 Lounge
             </p>
           </div>
 
@@ -48,7 +48,7 @@ const Rush: React.FC = () => {
               Enjoy a steak dinner with the brothers in a more intimate setting.
             </p>
             <p className="font-bold">
-              When: Wednesday, 7:30 PM, 2/5 | Where: SAE House, 155 Bay State Rd
+              When: Thursday, 7:30 PM, 2/5 | Where: SAE House, 155 Bay State Rd
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const Rush: React.FC = () => {
               Join us for a night of bowling and hanging out with the brothers.
             </p>
             <p className="font-bold">
-              When: Thursday, 8:00 PM, 2/6 | Where: 155 Bay State Rd
+              When: Friday, 8:00 PM, 2/6 | Where: 155 Bay State Rd
             </p>
           </div>
 
@@ -72,7 +72,7 @@ const Rush: React.FC = () => {
               Celebrate the end of rush with brothers and new members.
             </p>
             <p className="font-bold">
-              When: Friday, 7:00 PM, 2/7 | Where: Location TBA
+              When: Saturday, 7:00 PM, 2/7 | Where: Location TBA
             </p>
           </div>
 

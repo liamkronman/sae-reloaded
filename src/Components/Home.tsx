@@ -85,12 +85,6 @@ const About: React.FC = () => (
   </div>
 );
 
-type Card = {
-  title: string;
-  text: string;
-  link: string;
-};
-
 /* Need more content before running this tbh also chatgpt made this part anyway */
 
 /*

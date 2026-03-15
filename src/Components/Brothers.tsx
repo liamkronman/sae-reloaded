@@ -134,7 +134,7 @@ const brothers: Brother[] = [
     hometown: "Jamestown, ND",
     img: "jacob.jpeg",
     year: 2028,
-    clubs: [],
+    clubs: ["MIT Live"],
     interests: ["Michael Voight"],
     ig: "https://www.instagram.com/zezz_tee",
     showClubs: false,

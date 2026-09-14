@@ -87,7 +87,7 @@ const Rush: React.FC = () => {
             The SAE house is a minute’s walk from the Silber Way stop on the Boston East SafeRide.
           </p>
           <p>
-            Contact the Rush Chairs: James Ball (jfball) and Regan Song (reggo)
+            Contact the Rush Chair: Regan Song (reggo)
           </p>
         </div>
       </div>

@@ -8,24 +8,19 @@ interface ContactInfo {
 
 const contacts: ContactInfo[] = [
   {
-    name: 'Abe Schechinger',
+    name: 'Michael Voigt',
     role: 'President',
-    email: 'abeschec@mit.edu',
+    email: 'mvoigt@mit.edu',
   },
   {
-    name: 'Addison Spiegel',
+    name: 'James Ball',
     role: 'Vice President',
-    email: 'spiegel1@mit.edu',
+    email: 'jfball@mit.edu',
   },
   {
     name: 'Regan Song',
     role: 'Rush Chair',
     email: 'reggo@mit.edu',
-  },
-  {
-    name: 'James Ball',
-    role: 'Rush Chair',
-    email: 'jfball@mit.edu',
   },
 ];
 

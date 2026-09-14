@@ -13,15 +13,6 @@ type Brother = {
 
 const brothers: Brother[] = [
   {
-    name: "Abe Schechinger",
-    hometown: "Oakland, IA",
-    img: "abe.jpg",
-    year: 2028,
-    clubs: ["Design Build Fly", "Intermural Soccer"],
-    interests: ["Soccer", "Saxophone", "Hiking"],
-    ig: "https://instagram.com/abe_schech",
-  },
-  {
     name: "Hubert Jiang",
     hometown: "Rochester, NY",
     img: "hubert.jpg",

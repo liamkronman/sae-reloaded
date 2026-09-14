@@ -83,7 +83,7 @@ const About = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            [President's Name]
+            Michael Voigt
           </motion.p>
           <motion.p
             className="text-gray-600 text-lg"

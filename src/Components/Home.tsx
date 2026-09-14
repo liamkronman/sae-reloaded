@@ -64,9 +64,9 @@ const About: React.FC = () => (
         About Us
       </h2>
       <p className="leading-relaxed text-gray-700">
-      Established at MIT in  1892, the Mass Iota Tau Chapter of Sigma Alpha Epsilon 
-      unites over 20 undergraduates who balance rigorous academics with a 
-      strong sense of purpose. From our home at 155 Bay State Road, brothers pursue research, 
+      Established at MIT in  1892, the Mass Iota Tau Chapter of Sigma Alpha Epsilon
+      unites over 20 undergraduates who balance rigorous academics with a
+      strong sense of purpose. Brothers pursue research,
       athletics, startups, and campus leadership while upholding SAE’s “True Gentleman” ideal.
 
       We invest in the community through philanthropy, dedicate regular study sessions 
